@@ -114,6 +114,28 @@ background-image: none
     z-index: 50;
 }
 
+#mconavbar{
+     background: linear-gradient(to right, #735749, #8f6f5b);
+     color:#fff;
+     font-size: 35px;
+}
+
+#mconavbar li {
+     margin-top:15px;
+}
+
+.navbar-toggle{
+
+      margin-top: 15px;	
+      font-size:35px;
+     
+}
+
+.navbar-toggle:hover{
+      font-size:35px; 
+      margin-top:12px;
+      margin-right:12px;			
+}
 
 
 /***************HEADER*******************/
@@ -454,6 +476,15 @@ aside {
 
 /*********NAVBAR*********/
 
+#mconavbar{
+     background: linear-gradient(to right, #735749, #8f6f5b);
+     color:#fff;
+     font-size: 25px;
+}
+
+#mconavbar li {
+     margin-top:0px;
+}
 
 
 /*********HEADER*********/
