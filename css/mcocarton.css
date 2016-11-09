@@ -130,10 +130,8 @@ background-image: none
 }
 
 .navbar-toggle{
-
       margin-top: 15px;
       font-size:35px;
-
 }
 
 .navbar-toggle:hover{
@@ -148,12 +146,12 @@ background-image: none
 header {
     background-image: url(../img/background/Background_Michel_1.JPG);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     height:440px;
     box-shadow: inset 0px 10px 50px rgba(80, 57, 53, 0.3);
     box-shadow: 0px 0px 10px 5px rgba(80, 57, 53, 0.2);
-
 }
+
 #logos {
     /*Le fond spécials pourra être remis là*/
     background-color: rgba(80, 50, 50, 0.6);
@@ -206,23 +204,23 @@ ACCEUIL  page for michelcarton's website
     border-bottom: 3px solid #735749;
 }
 
-.journal .photoProfile{
+/*.journal .photoProfile{
   width:50px;
   height:50px;
   border-radius: 40px;
   background-color: red;
-}
+}*/
 
 .journal .date_du_post{
     display:flex;
     justify-content: space-between;
 }
 
-.journal .journal_corps figure {
+/*.journal .journal_corps figure {
     margin: 20px auto;
     width:450px;
     height:320px;
-}
+}*/
 
 
 
@@ -628,14 +626,14 @@ CONTACT  page for michelcarton's website
 /*journal*/
 
     .journal_corps{
-        display: flex;
+        /*display: flex;*/
     }
     .journal figure {
         width: 50%;
     }
     .journal_corps article {
         padding: 20px;
-        width: 50%;
+        margin-bottom: 50px;
     }
     /*********FOOTER*********/
 

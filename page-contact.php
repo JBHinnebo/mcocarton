@@ -1,6 +1,22 @@
 <?php get_header(); ?>
 
+<?php
 
+if(!empty($_GET['type']) && !empty($_GET['code'])) {
+  if ('error' == $_GET['type']) {
+    if (1 == $_GET['code']) {
+      $message_error = 'Tous les champs sont obligatoire';
+    }
+    else {
+      $message_error = 'Une erreur s\'est produite pendant l\'envoi du mail, merci de réessayer';
+    }
+  }
+  else {
+    $message_success = 'Votre message a bien été envoyé, merci. Je vous répondrai au plus vite.';
+  }
+}
+
+ ?>
 
 <section id="main">
 
@@ -17,7 +33,8 @@
             </p>
             <p>
                 <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
-                <span>+33 3 20 02 79 68<span>
+                <span>+33 3 20 02 79 68<span> <br>
+		<span><i class="fa fa-skype fa-2x" aria-hidden="true"></i> <a href="skype:[Michel Castelain]?call">Skype</a> </span>
             <p>
 
         </article>
@@ -25,7 +42,9 @@
 
 
     <!--////////contact form ///////-->
-        <form class="formulaire_contact" action="contact.html" method="post" action="cible.php">
+        <form class="formulaire_contact" action="cible.php" method="post">
+
+
             <i class="fa fa-user bigicon"></i><br>
             <input type="text" name="lastname" placeholder="NOM">
             <br>
@@ -50,4 +69,3 @@
 
 
 <?php get_footer(); ?>
-

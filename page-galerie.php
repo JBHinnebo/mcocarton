@@ -4,8 +4,29 @@
 <!--////////CORPS DE TEXTE///////-->
         <section id="main">
             <h3>Mes Réalisations</h3>
+
+<?php
+
+	$args = array(
+		'post_type' => 'portfolio'
+	);
+
+	$query = new WP_Query( $args );
+
+?>
+
                 <ul id="galleryPhoto">
-                    <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-01.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-01.JPG'?>  alt="Elephant Rose" ></a> </li>
+
+<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
+        <li><a href="<?php the_permalink(); ?>">
+				 <?php the_post_thumbnail('large'); ?>
+        </a> </li>
+
+<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-02.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-02.JPG'?>  alt="Présentoire Photophore" ></a> </li>
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-03.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-03.JPG'?>  alt="Vase" ></a> </li>
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-04.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-04.JPG'?>  alt="Lampe d'Ambiance" ></a> </li>
@@ -23,6 +44,7 @@
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-17.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-17.JPG'?>  alt="Boite à Crayons" ></a> </li>
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-18.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-18.JPG'?>  alt="Valise" ></a> </li>
                     <li><a href=<?php echo get_template_directory_uri().'/img/450px/gallery-21.JPG'?>><img src=<?php echo get_template_directory_uri().'/img/200px/gallery-21.JPG'?>  alt="Bibliothèque" ></a> </li>
+
                 </ul>
         </section>
 
@@ -45,7 +67,9 @@ $("body").append($overlay);
 
 //Capture the click event on a link to an image
 $("#galleryPhoto a").click(function(event){
+
   event.preventDefault();
+
   var imageLocation = $(this).attr("href");
   //Update overlay with the image linked in the link
   $image.attr("src", imageLocation);

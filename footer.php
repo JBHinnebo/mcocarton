@@ -25,10 +25,9 @@
                 <article class="article article_footer_prendrecontact">
                     <h3>CONTACT</h3>
                     <div class="sociaux_bas">
-                       <a href=https://www.skype.com/en/><i class="fa fa-skype fa-3x" aria-hidden="true"></i></a>
-                       <a href=https://www.facebook.com/><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-                       <a href=https://www.youtube.com/><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
-                       <a href=https://twitter.com/><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                       <a href=https://www.facebook.com/mcocarton><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                       <a href=https://plus.google.com/101576597038967628970><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
+                       <a href=https://twitter.com/MichelCastelain><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
                      </div>
                 </article>
 
